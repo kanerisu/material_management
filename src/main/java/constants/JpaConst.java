@@ -19,18 +19,6 @@ public interface JpaConst {
     String ITE_COL_ID="id"; //id
     String ITE_COL_NAME="name"; //アイテム名
     String ITE_COL_PICTURE="picture"; //写真
-    String ITE_COL_MATERIAL_NAME_1="material_name_1"; //素材名1
-    String ITE_COL_MATERIAL_NAME_2="material_name_2"; //素材名2
-    String ITE_COL_MATERIAL_NAME_3="material_name_3"; //素材名3
-    String ITE_COL_MATERIAL_NAME_4="material_name_4"; //素材名4
-    String ITE_COL_MATERIAL_NAME_5="material_name_5"; //素材名5
-    String ITE_COL_MATERIAL_NAME_6="material_name_6"; //素材名6
-    String ITE_COL_PERCENTAGE_1="percentage_1"; //割合1
-    String ITE_COL_PERCENTAGE_2="percentage_2"; //割合2
-    String ITE_COL_PERCENTAGE_3="percentage_3"; //割合3
-    String ITE_COL_PERCENTAGE_4="percentage_4"; //割合4
-    String ITE_COL_PERCENTAGE_5="percentage_5"; //割合5
-    String ITE_COL_PERCENTAGE_6="percentage_6"; //割合6
 
     //素材テーブル
     String TABLE_MAT="materials"; //テーブル名
@@ -45,6 +33,7 @@ public interface JpaConst {
     String ITE_MAT_ID="id"; //id
     String ITE_MAT_ITE_ID="items_id"; //アイテムテーブルのid
     String ITE_MAT_MAT_ID="materials_id"; //素材テーブルのid
+    String ITE_MAT_PERCENTAGE="percentage"; //割合
 
     //Entity名
     String ENTITY_ITE="item"; //アイテム
@@ -63,6 +52,10 @@ public interface JpaConst {
     //全てのアイテムの件数を取得する
     String Q_ITE_COUNT=ENTITY_ITE+".count";
     String Q_ITE_COUNT_DEF="SELECT COUNT(e) FROM Item AS e";
+    
+    //全ての割合を降順に取得する
+    String Q_ITE_MAT_GET_ALL=ENTITY_ITE_MAT+".getAll";
+    String Q_ITE_MAT_GET_ALL_DEF="SELECT e FROM Item_material AS e ORDER BY e.percentage DESC";
 
 }
 

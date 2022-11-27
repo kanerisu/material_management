@@ -25,18 +25,6 @@ public enum AttributeConst {
     ITE_ID("id"),
     ITE_NAME("name"),
     ITE_PICTURE("picture"),
-    ITE_MATERIAL_NAME1("material_name_1"),
-    ITE_MATERIAL_NAME2("material_name_2"),
-    ITE_MATERIAL_NAME3("material_name_3"),
-    ITE_MATERIAL_NAME4("material_name_4"),
-    ITE_MATERIAL_NAME5("material_name_5"),
-    ITE_MATERIAL_NAME6("material_name_6"),
-    ITE_PERCENTAGE_1("percentage_1"),
-    ITE_PERCENTAGE_2("percentage_2"),
-    ITE_PERCENTAGE_3("percentage_3"),
-    ITE_PERCENTAGE_4("percentage_4"),
-    ITE_PERCENTAGE_5("percentage_5"),
-    ITE_PERCENTAGE_6("percentage_6"),
 
     //素材
     MATERIAL("material"),
@@ -49,8 +37,10 @@ public enum AttributeConst {
     //中間テーブル
     ITEM_MATERIAL("item_material"),
     ITEMS_MATERIALS("items_materials"),
+    ITE_MAT_ID("id"),
     ITE_MAT_ITE_ID("items_id"),
-    ITE_MAT_MAT_ID("materials_id");
+    ITE_MAT_MAT_ID("materials_id"),
+    ITE_MAT_PERCENTAGE("percentage");
 
     private final String text;
     private final Integer i;

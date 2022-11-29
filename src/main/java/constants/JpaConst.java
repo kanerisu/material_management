@@ -30,10 +30,10 @@ public interface JpaConst {
     //中間テーブル
     String TABLE_ITE_MAT="items_materials"; //テーブル名
     //中間テーブルカラム
-    String ITE_MAT_ID="id"; //id
-    String ITE_MAT_ITE_ID="items_id"; //アイテムテーブルのid
-    String ITE_MAT_MAT_ID="materials_id"; //素材テーブルのid
-    String ITE_MAT_PERCENTAGE="percentage"; //割合
+    String ITE_MAT_COL_ID="id"; //id
+    String ITE_MAT_ITE_COL_ID="items_id"; //アイテムテーブルのid
+    String ITE_MAT_MAT_COL_ID="materials_id"; //素材テーブルのid
+    String ITE_MAT_COL_PERCENTAGE="percentage"; //割合
 
     //Entity名
     String ENTITY_ITE="item"; //アイテム
@@ -52,10 +52,11 @@ public interface JpaConst {
     //全てのアイテムの件数を取得する
     String Q_ITE_COUNT=ENTITY_ITE+".count";
     String Q_ITE_COUNT_DEF="SELECT COUNT(e) FROM Item AS e";
-    
+
     //全ての割合を降順に取得する
     String Q_ITE_MAT_GET_ALL=ENTITY_ITE_MAT+".getAll";
     String Q_ITE_MAT_GET_ALL_DEF="SELECT e FROM Item_material AS e ORDER BY e.percentage DESC";
+
 
 }
 
